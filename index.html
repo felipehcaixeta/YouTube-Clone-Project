@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.png" sizes="16x16 32x32" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <title>YouTube Project</title>
+  </head>
+  <body class="dark-mode">
+    <header class="nav-bar flex-set dark-mode">
+      <nav class="nav-left flex-set">
+        <button class="menu-toggle flex-set" id="MenuToggle">
+          <i class="bi bi-list menu-icon flex-set"></i>
+        </button>
+
+        <button class="youtube-logo">
+          <a href="index.html">
+            <img
+              src="images/YTLogo.png"
+              alt="YouTube Logo"
+              title="YouTube Home"
+            />
+          </a>
+        </button>
+      </nav>
+
+      <nav class="search-bar flex-set">
+        <div class="search-input flex-set">
+          <input type="text" placeholder="Search" />
+          <button class="search-btn">
+            <i class="bi bi-search" title="Search"></i>
+          </button>
+        </div>
+
+        <button class="mic-btn" title="Search with your voice">
+          <i class="bi bi-mic-fill"></i>
+        </button>
+      </nav>
+
+      <nav class="nav-right flex-set">
+        <button class="create-btn right-btns flex-set font-bold">
+          <i class="bi bi-plus-lg flex-set"></i>
+          <p class="create-text">Create</p>
+        </button>
+
+        <button class="notif-btn right-btns">
+          <i class="bi bi-bell" title="Notifications"></i>
+        </button>
+
+        <button class="profile-btn-nav right-btns">
+          <i class="bi bi-person-circle" title="Profile"></i>
+        </button>
+      </nav>
+    </header>
+
+    <div class="scrollable-header dark-mode" id="ScrollableHeader">
+      <div><button class="scroll-btn">All</button></div>
+
+      <div><button class="scroll-btn">News</button></div>
+
+      <div><button class="scroll-btn">Gaming</button></div>
+
+      <div><button class="scroll-btn">Horizon Forbidden West</button></div>
+
+      <div><button class="scroll-btn">Software Development</button></div>
+
+      <div><button class="scroll-btn">Music</button></div>
+
+      <div><button class="scroll-btn">Gaming Computers</button></div>
+
+      <div><button class="scroll-btn">AI</button></div>
+
+      <div><button class="scroll-btn">Augmented Reality</button></div>
+
+      <div><button class="scroll-btn">Live</button></div>
+
+      <div><button class="scroll-btn">The Witcher</button></div>
+
+      <div><button class="scroll-btn">Marvel</button></div>
+
+      <div><button class="scroll-btn">DC Universe</button></div>
+
+      <div><button class="scroll-btn">Ghibili Studio Music</button></div>
+
+      <div><button class="scroll-btn">Mixes</button></div>
+
+      <div><button class="scroll-btn">Rock</button></div>
+
+      <div><button class="scroll-btn">Jazz</button></div>
+
+      <div><button class="scroll-btn">Action Movies</button></div>
+
+      <div><button class="scroll-btn">Studio Ghibli</button></div>
+
+      <div><button class="scroll-btn">Puzzles</button></div>
+
+      <div><button class="scroll-btn">Spirited Away</button></div>
+
+      <div><button class="scroll-btn">Ambient Music</button></div>
+
+      <div><button class="scroll-btn">Howl's Moving Castle</button></div>
+    </div>
+
+    <aside class="side-menu dark-mode">
+      <button class="side-btns flex-set" title="Home">
+        <a class="bi bi-house-door side-boot" href="index.html"></a>
+        <span class="menu-text">Home</span>
+      </button>
+
+      <button class="side-btns flex-set" title="Shorts">
+        <a class="bi bi-lightning side-boot" href="#"></a>
+        <!-- need to find a better shorts button for this -->
+        <span class="menu-text">Shorts</span>
+      </button>
+
+      <button class="side-btns flex-set" title="Subscriptions">
+        <a class="bi bi-collection-play side-boot" href="#"></a>
+        <span class="menu-text">Subscriptions</span>
+      </button>
+
+      <button class="side-btns flex-set" title="YouTube Music">
+        <a class="bi bi-music-note side-boot" href="#"></a>
+        <span class="menu-text">YouTube Music</span>
+      </button>
+
+      <button class="side-btns flex-set" title="You">
+        <a class="bi bi-person-circle side-boot" href="#"></a>
+        <span class="menu-text">You</span>
+      </button>
+
+      <button class="side-btns flex-set" title="Downloads">
+        <a class="bi bi-download side-boot" href="#"></a>
+        <span class="menu-text">Downloads</span>
+      </button>
+    </aside>
+
+    <div class="hidden-app-drawer dark-mode" id="AppDrawer">
+      <div class="drawer-section">
+        <a href="index.html" title="Home">
+          <button
+            class="app-drawer-btns dark-mode font-color-drawer"
+            id="DrawerHome"
+          >
+            <i class="bi bi-house-door"></i>
+            <p class="font-bold">Home</p>
+          </button></a
+        >
+
+        <a href="#" title="Shorts">
+          <button class="app-drawer-btns dark-mode font-color-drawer">
+            <i class="bi bi-lightning"></i>
+            <p>Shorts</p>
+          </button></a
+        >
+
+        <a href="#" title="Subscriptions">
+          <button class="app-drawer-btns dark-mode font-color-drawer">
+            <i class="bi bi-collection-play"></i>
+            <p>Subscriptions</p>
+          </button></a
+        >
+
+        <a href="#" title="YouTube Music">
+          <button class="app-drawer-btns dark-mode font-color-drawer">
+            <i class="bi bi-music-note"></i>
+            <p>YouTube Music</p>
+          </button></a
+        >
+      </div>
+
+      <div class="drawer-section">
+        <a href="#" title="You">
+          <button class="app-drawer-btns dark-mode font-color-drawer">
+            <p class="font-bold">You ></p>
+          </button></a
+        >
+        <a href="#" title="History">
+          <button class="app-drawer-btns dark-mode font-color-drawer">
+            <i class="bi bi-clock-history"></i>
+            <p>History</p>
+          </button></a
+        >
+
+        <a href="#" title="Playlists">
+          <button class="app-drawer-btns dark-mode font-color-drawer">
+            <i class="bi bi-list"></i>
+            <p>Playlists</p>
+          </button></a
+        >
+
+        <a href="#" title="Your Videos">
+          <button class="app-drawer-btns dark-mode font-color-drawer">
+            <i class="bi bi-play-btn"></i>
+            <p>Your Videos</p>
+          </button></a
+        >
+
+        <a href="#" title="Watch Later">
+          <button class="app-drawer-btns dark-mode font-color-drawer">
+            <i class="bi bi-alarm"></i>
+            <p>Watch Later</p>
+          </button></a
+        >
+
+        <a href="#" title="Liked Videos">
+          <button class="app-drawer-btns dark-mode font-color-drawer">
+            <i class="bi bi-hand-thumbs-up"></i>
+            <p>Liked Videos</p>
+          </button></a
+        >
+
+        <a href="#" title="Downloads">
+          <button class="app-drawer-btns dark-mode font-color-drawer">
+            <i class="bi bi-download"></i>
+            <p>Downloads</p>
+          </button></a
+        >
+      </div>
+
+      <div class="drawer-section">
+        <p class="font-color-drawer subs-section font-bold">Subscriptions</p>
+
+        <a href="#" title="The Coding Sloth"
+          ><button class="app-drawer-btns dark-mode font-color-drawer">
+            <img
+              src="images/coding_sloth_profile.jpg"
+              alt="channel_avatar"
+              class="avatar icon-space"
+            />
+            <p>The Coding Sloth</p>
+          </button></a
+        >
+        <a href="#" title="LiSA Official YouTube"
+          ><button class="app-drawer-btns dark-mode font-color-drawer">
+            <img
+              src="images/LiSA_profile.jpg"
+              alt="channel_avatar"
+              class="avatar icon-space"
+            />
+            <p>LiSA Official YouTube</p>
+          </button></a
+        >
+
+        <a href="#" title="ThePrimeTime"
+          ><button class="app-drawer-btns dark-mode font-color-drawer">
+            <img
+              src="images/prime_time.jpg"
+              alt="channel_avatar"
+              class="avatar icon-space"
+            />
+            <p>ThePrimeTime</p>
+          </button></a
+        >
+
+        <a href="#" title="penguinz0"
+          ><button class="app-drawer-btns dark-mode font-color-drawer">
+            <img
+              src="images/charlie_profile.jpg"
+              alt="channel_avatar"
+              class="avatar icon-space"
+            />
+            <p>penguinz0</p>
+          </button></a
+        >
+
+        <a href="#" title="THE FIRST TAKE"
+          ><button class="app-drawer-btns dark-mode font-color-drawer">
+            <img
+              src="images/the_first_take_profile.jpg"
+              alt="channel_avatar"
+              class="avatar icon-space"
+            />
+            <p>THE FIRST TAKE</p>
+          </button></a
+        >
+
+        <a href="#" title="Programming with Mosh"
+          ><button class="app-drawer-btns dark-mode font-color-drawer">
+            <img
+              src="images/mosh_profile.jpg"
+              alt="channel_avatar"
+              class="avatar icon-space"
+            />
+            <p>Programming with Mosh</p>
+          </button></a
+        >
+      </div>
+
+      <div class="drawer-section">
+        <a href="#" title="Settings"
+          ><button class="app-drawer-btns dark-mode font-color-drawer">
+            <i class="bi bi-gear"></i>
+            <p>Settings</p>
+          </button></a
+        >
+
+        <a href="#" title="Report History"
+          ><button class="app-drawer-btns dark-mode font-color-drawer">
+            <i class="bi bi-flag"></i>
+            <p>Report History</p>
+          </button></a
+        >
+
+        <a href="#" title="Help"
+          ><button class="app-drawer-btns dark-mode font-color-drawer">
+            <i class="bi bi-question-circle"></i>
+            <p>Help</p>
+          </button></a
+        >
+
+        <a href="#" title="Send Feedback"
+          ><button class="app-drawer-btns dark-mode font-color-drawer">
+            <i class="bi bi-chat-dots"></i>
+            <p>Send Feedback</p>
+          </button></a
+        >
+      </div>
+    </div>
+
+    <main class="content grid-layout" id="MainContent">
+      <!-- Videos Display Here -->
+      <div class="video-card">
+        <div class="thumbnail-container">
+          <img
+            src="/images/gym_handstand.png"
+            alt="gym_handstand"
+            loading="lazy"
+            class="thumbnail-img"
+          />
+          <div class="video-time">10:00</div>
+        </div>
+
+        <div class="video-info">
+          <img src="images/my_avatar.jpg" alt="channel_avatar" class="avatar" />
+
+          <div class="video-text">
+            <h3 class="video-title" title="Handstand in the Gym">
+              Handstand in the Gym
+            </h3>
+            <p class="channel-name" title="Felipe Caixeta">Felipe Caixeta</p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail-container">
+          <img
+            src="/images/chair_handstand.png"
+            alt="gym_handstand"
+            loading="lazy"
+            class="thumbnail-img"
+          />
+          <div class="video-time">10:00</div>
+        </div>
+
+        <div class="video-info">
+          <img src="images/my_avatar.jpg" alt="channel_avatar" class="avatar" />
+
+          <div class="video-text">
+            <h3 class="video-title" title="Handstand on Chairs">
+              Handstand on Chairs
+            </h3>
+            <p class="channel-name" title="Felipe Caixeta">Felipe Caixeta</p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <a href="video_3.html">
+          <div class="thumbnail-container">
+            <img
+              src="/images/witcher_piano.jpg"
+              alt="gym_handstand"
+              loading="lazy"
+              class="thumbnail-img"
+            />
+            <div class="video-time">10:00</div>
+          </div></a
+        >
+
+        <div class="video-info">
+          <img
+            src="images/bits_profile.jpg"
+            alt="channel_avatar"
+            class="avatar"
+          />
+
+          <div class="video-text">
+            <a href="video_3.html"
+              ><h3 class="video-title" title="The Witcher but it's piano">
+                The Witcher but it's piano
+              </h3></a
+            >
+            <p class="channel-name" title="bits & hits">bits & hits</p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <a href="video_4.html"
+          ><div class="thumbnail-container">
+            <img
+              src="/images/python_course.jpg"
+              alt="gym_handstand"
+              loading="lazy"
+              class="thumbnail-img"
+            />
+            <div class="video-time">10:00</div>
+          </div></a
+        >
+
+        <div class="video-info">
+          <a href="video_4.html"
+            ><img
+              src="images/mosh_profile.jpg"
+              alt="channel_avatar"
+              class="avatar"
+          /></a>
+
+          <div class="video-text">
+            <a href="video_4.html"
+              ><h3 class="video-title" title="Python Full Course for Beginners">
+                Python Full Course for Beginners
+              </h3></a
+            >
+            <p class="channel-name" title="Programming with Mosh">
+              Programming with Mosh
+            </p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail-container">
+          <img
+            src="/images/Yuuri_Dry.jpg"
+            alt="gym_handstand"
+            loading="lazy"
+            class="thumbnail-img"
+          />
+          <div class="video-time">10:00</div>
+        </div>
+
+        <div class="video-info">
+          <img
+            src="images/the_first_take_profile.jpg"
+            alt="channel_avatar"
+            class="avatar"
+          />
+
+          <div class="video-text">
+            <h3 class="video-title" title="Yuuri - Dry Flower/THE FIRST TAKE">
+              Yuuri - Dry Flower/THE FIRST TAKE
+            </h3>
+            <p class="channel-name" title="THE FIRST TAKE">THE FIRST TAKE</p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail-container">
+          <img
+            src="/images/Laufey_Start.jpg"
+            alt="gym_handstand"
+            loading="lazy"
+            class="thumbnail-img"
+          />
+          <div class="video-time">10:00</div>
+        </div>
+
+        <div class="video-info">
+          <img
+            src="images/the_first_take_profile.jpg"
+            alt="channel_avatar"
+            class="avatar"
+          />
+
+          <div class="video-text">
+            <h3
+              class="video-title"
+              title="Laufey - From The Start/THE FIRST TAKE"
+            >
+              Laufey - From The Start/THE FIRST TAKE
+            </h3>
+            <p class="channel-name" title="THE FIRST TAKE">THE FIRST TAKE</p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail-container">
+          <img
+            src="/images/back_lever.png"
+            alt="gym_handstand"
+            loading="lazy"
+            class="thumbnail-img"
+          />
+          <div class="video-time">10:00</div>
+        </div>
+
+        <div class="video-info">
+          <img src="images/my_avatar.jpg" alt="channel_avatar" class="avatar" />
+
+          <div class="video-text">
+            <h3 class="video-title" title="Backlever">Backlever</h3>
+            <p class="channel-name" title="Felipe Caixeta">Felipe Caixeta</p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail-container">
+          <img
+            src="/images/bike_race.png"
+            alt="gym_handstand"
+            loading="lazy"
+            class="thumbnail-img"
+          />
+          <div class="video-time">10:00</div>
+        </div>
+
+        <div class="video-info">
+          <img src="images/my_avatar.jpg" alt="channel_avatar" class="avatar" />
+
+          <div class="video-text">
+            <h3 class="video-title" title="Local Criterium">Local Criterium</h3>
+            <p class="channel-name" title="Felipe Caixeta">Felipe Caixeta</p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail-container">
+          <img
+            src="/images/muscle_up_brother.png"
+            alt="gym_handstand"
+            loading="lazy"
+            class="thumbnail-img"
+          />
+          <div class="video-time">10:00</div>
+        </div>
+
+        <div class="video-info">
+          <img src="images/my_avatar.jpg" alt="channel_avatar" class="avatar" />
+
+          <div class="video-text">
+            <h3 class="video-title" title="Back When I Could Muscle Up">
+              Back When I Could Muscle Up
+            </h3>
+            <p class="channel-name" title="Felipe Caixeta">Felipe Caixeta</p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail-container">
+          <img
+            src="/images/penguinz0.jpg"
+            alt="gym_handstand"
+            loading="lazy"
+            class="thumbnail-img"
+          />
+          <div class="video-time">10:00</div>
+        </div>
+
+        <div class="video-info">
+          <img
+            src="images/charlie_profile.jpg"
+            alt="channel_avatar"
+            class="avatar"
+          />
+
+          <div class="video-text">
+            <h3 class="video-title" title="That's About It, See Ya">
+              That's About It, See Ya
+            </h3>
+            <p class="channel-name" title="penguinz0">penguinz0</p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail-container">
+          <img
+            src="/images/Cats.jpg"
+            alt="gym_handstand"
+            loading="lazy"
+            class="thumbnail-img"
+          />
+          <div class="video-time">10:00</div>
+        </div>
+
+        <div class="video-info">
+          <img src="images/my_avatar.jpg" alt="channel_avatar" class="avatar" />
+
+          <div class="video-text">
+            <h3 class="video-title" title="Silly Cats">Silly Cats</h3>
+            <p class="channel-name" title="Felipe Caixeta">Felipe Caixeta</p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail-container">
+          <img
+            src="/images/tandoori_chicken.png"
+            alt="gym_handstand"
+            loading="lazy"
+            class="thumbnail-img"
+          />
+          <div class="video-time">10:00</div>
+        </div>
+
+        <div class="video-info">
+          <img src="images/my_avatar.jpg" alt="channel_avatar" class="avatar" />
+
+          <div class="video-text">
+            <h3 class="video-title" title="Tandoori Chicken">
+              Tandoori Chicken
+            </h3>
+            <p class="channel-name" title="Felipe Caixeta">Felipe Caixeta</p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail-container">
+          <img
+            src="/images/Coding_Sloth.jpg"
+            alt="gym_handstand"
+            loading="lazy"
+            class="thumbnail-img"
+          />
+          <div class="video-time">10:00</div>
+        </div>
+
+        <div class="video-info">
+          <img
+            src="images/coding_sloth_profile.jpg"
+            alt="channel_avatar"
+            class="avatar"
+          />
+
+          <div class="video-text">
+            <h3 class="video-title" title="Learn To Code Like a GENIUS">
+              Learn To Code Like a GENIUS
+            </h3>
+            <p class="channel-name" title="The Coding Sloth">
+              The Coding Sloth
+            </p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail-container">
+          <img
+            src="/images/aimer_first.jpg"
+            alt="gym_handstand"
+            loading="lazy"
+            class="thumbnail-img"
+          />
+          <div class="video-time">10:00</div>
+        </div>
+
+        <div class="video-info">
+          <img
+            src="images/the_first_take_profile.jpg"
+            alt="channel_avatar"
+            class="avatar"
+          />
+
+          <div class="video-text">
+            <h3
+              class="video-title"
+              title="Aimer - Zankyosanka / THE FIRST TAKE"
+            >
+              Aimer - Zankyosanka / THE FIRST TAKE
+            </h3>
+            <p class="channel-name" title="THE FIRST TAKE">THE FIRST TAKE</p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail-container">
+          <img
+            src="/images/hadashi.jpg"
+            alt="gym_handstand"
+            loading="lazy"
+            class="thumbnail-img"
+          />
+          <div class="video-time">10:00</div>
+        </div>
+
+        <div class="video-info">
+          <img
+            src="images/LiSA_profile.jpg"
+            alt="channel_avatar"
+            class="avatar"
+          />
+
+          <div class="video-text">
+            <h3
+              class="video-title"
+              title="LiSA 『HADASHi NO STEP』 -MUSiC CLiP-"
+            >
+              LiSA 『HADASHi NO STEP』 -MUSiC CLiP-
+            </h3>
+            <p
+              class="channel-name"
+              title="
+            LiSA Official YouTube
+            "
+            >
+              LiSA Official YouTube
+            </p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail-container">
+          <img
+            src="/images/omokage.jpg"
+            alt="gym_handstand"
+            loading="lazy"
+            class="thumbnail-img"
+          />
+          <div class="video-time">10:00</div>
+        </div>
+
+        <div class="video-info">
+          <img
+            src="images/the_first_take_profile.jpg"
+            alt="channel_avatar"
+            class="avatar"
+          />
+
+          <div class="video-text">
+            <h3
+              class="video-title"
+              title="milet, Aimer, Lilas Ikuta - Omokage (produced by Vaundy) / THE FIRST TAKE"
+            >
+              milet, Aimer, Lilas Ikuta - Omokage (produced by Vaundy) / THE
+              FIRST TAKE
+            </h3>
+            <p class="channel-name" title="THE FIRST TAKE">THE FIRST TAKE</p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail-container">
+          <img
+            src="/images/lisaxuru.jpg"
+            alt="gym_handstand"
+            loading="lazy"
+            class="thumbnail-img"
+          />
+          <div class="video-time">10:00</div>
+        </div>
+
+        <div class="video-info">
+          <img
+            src="images/the_first_take_profile.jpg"
+            alt="channel_avatar"
+            class="avatar"
+          />
+
+          <div class="video-text">
+            <h3
+              class="video-title"
+              title="LiSAxUru - Saikai (produced by Ayase) / THE FIRST TAKE"
+            >
+              LiSAxUru - Saikai (produced by Ayase) / THE FIRST TAKE
+            </h3>
+            <p class="channel-name" title="THE FIRST TAKE">THE FIRST TAKE</p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail-container">
+          <img
+            src="/images/millet.jpg"
+            alt="gym_handstand"
+            loading="lazy"
+            class="thumbnail-img"
+          />
+        </div>
+
+        <div class="video-info">
+          <img
+            src="images/the_first_take_profile.jpg"
+            alt="channel_avatar"
+            class="avatar"
+          />
+
+          <div class="video-text">
+            <h3
+              class="video-title"
+              title="miletxCateen - Fly High / THE FIRST TAKE"
+            >
+              miletxCateen - Fly High / THE FIRST TAKE
+            </h3>
+            <p class="channel-name" title="THE FIRST TAKE">THE FIRST TAKE</p>
+            <p class="views-date">100k views • 10 days ago</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="hidden_menu_bar.js" defer></script>
+  </body>
+</html>

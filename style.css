@@ -1,0 +1,496 @@
+/* Box sizing/ General settings*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dark-mode {
+  background-color: #0f0f0f;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex-set {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-content {
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+.flex-adapt {
+  flex: 1 1 0;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  grid-auto-rows: minmax(auto, 20em);
+  gap: 3em 1em;
+}
+
+#favicon {
+  width: 16px;
+  height: 16px;
+}
+
+/*---------Navigation bar items---------*/
+.nav-bar {
+  top: 0;
+  height: 3.5em;
+  width: 100%;
+  margin: 0 1em;
+  flex-direction: row;
+  justify-content: space-between;
+  position: sticky;
+  z-index: 100; /* ensures bar stays on top */
+}
+
+.menu-toggle {
+  height: 1em;
+  width: 1em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f0f0f0;
+  font-size: 1.5em;
+  margin: 0.2em;
+  margin-left: 0.1em;
+  padding: 0.8em 0.8em;
+}
+
+.menu-toggle:hover {
+  background-color: #282828;
+  border-radius: 50%;
+}
+
+.youtube-logo {
+  width: 8.3em;
+  height: auto;
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  margin: 0.4em;
+  margin-top: 0.6em;
+}
+
+.youtube-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.search-bar {
+  gap: 1em;
+  width: 41em;
+}
+
+.search-bar button {
+  cursor: pointer;
+}
+
+.search-input {
+  border-radius: 3em;
+  border: 0.1em solid #333;
+  width: 41vw;
+  height: 2.4em;
+  max-width: 41vw;
+  overflow: hidden;
+}
+
+.search-input input {
+  background-color: #131313;
+  color: #f0f0f0;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  padding: 0.5em;
+  padding-left: 1em;
+  width: 41vw;
+  max-width: 41vw;
+  flex-shrink: 1;
+}
+
+.search-btn i {
+  font-size: 1.5em;
+}
+.search-btn {
+  height: 3em;
+  background-color: #232323;
+  border: none;
+  border-left: 0.1em solid #333;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+  color: #f0f0f0;
+  padding: 0.6em 1.7em;
+}
+
+.mic-btn {
+  color: #f0f0f0;
+  background-color: #232323;
+  border: none;
+  padding: 0.7em 0.8em;
+  border-radius: 50%;
+  font-size: 1em;
+}
+
+.mic-btn:hover {
+  background-color: #333;
+  transition: 0.1s ease-in-out;
+}
+
+.right-btns {
+  border: none;
+  cursor: pointer;
+}
+
+.create-btn {
+  background-color: #282828;
+  color: #f0f0f0;
+  font-size: 0.9em;
+  padding: 0.5em 0.9em;
+  margin: 0.2em;
+  border-radius: 2em;
+}
+
+.create-btn:hover {
+  background-color: #343434;
+  transition: 0.1s ease-in-out;
+}
+
+.bi-plus-lg {
+  font-size: 1.4em;
+}
+
+.create-text {
+  font-size: 1em;
+  margin-left: 0.3em;
+}
+
+.notif-btn {
+  background-color: transparent;
+  color: #f0f0f0;
+  padding: 0.4em 0.5em;
+  font-size: 1.2em;
+  margin: 0.3em;
+}
+
+.notif-btn:hover {
+  border-radius: 50%;
+  background-color: #282828;
+  transform: 0.1s ease-in-out;
+}
+
+.profile-btn-nav {
+  font-size: 1.7em;
+  background-color: transparent;
+  color: #555;
+  padding: 0.2em 0.2em;
+  margin: 0.1em 0.2em;
+}
+
+.scrollable-header {
+  top: 3.5em;
+  left: 5em;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  white-space: nowrap;
+  height: 3.4em;
+  width: 96.4%;
+  z-index: 100;
+  overflow-x: scroll;
+  position: sticky;
+}
+
+.scrollable-header::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-btn {
+  border: none;
+  border-radius: 0.6em;
+  height: 2.1em;
+  width: fit-content;
+  background-color: #282828;
+  color: #f0f0f0;
+  font-weight: 580;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  margin: 0.4em;
+}
+
+.scroll-btn:hover {
+  background-color: #343434;
+}
+
+/*-----------Side menu items----------*/
+
+.side-menu {
+  top: 3.7em;
+  left: 0;
+  width: 4.5em;
+  height: 100vh;
+  position: fixed;
+}
+
+.side-btns {
+  background-color: transparent;
+  border: none;
+  color: #f0f0f0;
+  width: fit-content;
+  font-size: 1.2em;
+  padding: 1em 0em;
+  margin-left: 0.2em;
+  flex-wrap: wrap;
+}
+
+.side-btns:hover {
+  background-color: #282828;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+
+.side-boot {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+.menu-text {
+  font-size: 0.5em;
+  text-decoration: none;
+  width: 6em;
+  margin-top: 0.4em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*----------Hidden App Drawer--------- */
+
+.hidden-app-drawer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  top: 56px;
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.font-color-drawer {
+  color: #f0f0f0;
+}
+
+.font-bold {
+  font-weight: 580;
+}
+
+.drawer-section a {
+  display: flex;
+  align-items: center;
+}
+
+.subs-section {
+  margin: 0.4em;
+  margin-left: 1.3em;
+}
+
+.app-drawer-btns i {
+  font-size: 1.4em;
+  margin-right: 1.5em;
+}
+
+.app-drawer-btns p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.icon-space {
+  margin-right: 1.5em;
+}
+
+.drawer-section {
+  margin-top: 1em;
+  border-bottom: 1px solid #444;
+  padding-bottom: 1em;
+  width: 80%;
+}
+
+.menu-bar-open {
+  left: 0;
+}
+
+.app-drawer-shift {
+  transform: translateX(15.7em);
+}
+
+.header-shift {
+  transform: translateX(10.8em);
+}
+
+.app-drawer-btns {
+  display: flex;
+  align-items: center;
+  border: none;
+  font-size: 0.9em;
+  padding: 0.6em;
+  margin-left: 0.8em;
+  width: 100%;
+}
+
+#DrawerHome {
+  background-color: #262626;
+  border-radius: 0.7em;
+}
+
+#DrawerHome:hover {
+  background-color: #555;
+}
+
+.app-drawer-btns:hover {
+  background-color: #262626;
+  border-radius: 0.7em;
+  cursor: pointer;
+}
+
+.hidden-app-drawer::-webkit-scrollbar {
+  width: 6px;
+}
+
+/*-----------Videos display here----------*/
+.content {
+  margin: 0.3em;
+  margin-right: 1em;
+  margin-left: 5.5em;
+  height: 100vh;
+  width: 100vw;
+}
+
+.reduce-margin {
+  margin-left: 0.5em;
+}
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 32em;
+  align-items: flex-start;
+}
+
+.thumbnail-img {
+  height: auto;
+  width: 100%;
+  border-radius: 0.8em;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.thumbnail-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.video-time {
+  background-color: rgb(0, 0, 0, 0.7);
+  border-radius: 0.3em;
+  font-size: 0.8em;
+  position: absolute;
+  color: white;
+  padding: 0.2em;
+  margin: 1em;
+}
+
+.thumbnail-img:hover {
+  border-radius: 0;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.avatar {
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.video-title {
+  color: #f0f0f0;
+  font-weight: 580;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.video-info {
+  display: flex;
+  margin-top: 0.7em;
+  font-size: 0.9em;
+  width: 100%;
+}
+
+.video-text {
+  margin-left: 0.6em;
+}
+
+.channel-name {
+  color: #888;
+  margin-top: 0.4em;
+  cursor: pointer;
+}
+
+.channel-name:hover {
+  color: #cfcfcf;
+}
+
+.views-date {
+  color: #888;
+}
+
+/*---------Video Pages------------*/
+.embed-video {
+  margin-left: 15%;
+  width: 55em;
+  height: 30em;
+}
+
+.video-page {
+  display: flex;
+  align-items: flex-start;
+}
+
+/*----------Adjustments-----------*/
+
+@media (max-width: 768px) {
+  .side-menu {
+    display: none;
+  }
+  .content {
+    margin-left: 1em;
+  }
+}
+
+/* TODO:
+-make sure navbar, scroll bar, and aside stay on top when user scroll down
+-still need to implement the scrollbar buttons
+-make video-card shrink when resizing screen (now it does shrink. I just need to adjust the img to landscape mode)*/
