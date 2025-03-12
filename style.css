@@ -213,12 +213,13 @@ a {
   left: 5em;
   margin-bottom: 1em;
   margin-left: 5.1em;
+  margin-right: 1em;
   display: flex;
   align-items: center;
   justify-items: center;
   white-space: nowrap;
   height: 3.4em;
-  width: 96.4%;
+  width: 100%;
   z-index: 100;
   overflow-x: scroll;
   position: sticky;
@@ -485,15 +486,246 @@ a {
 }
 
 /*---------Video Pages------------*/
+.columns {
+  margin: 0 auto;
+  width: 50%;
+  height: 100vh;
+}
+
+.vid-flex-set {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.yt-flexy {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.primary {
+  padding-top: 2em;
+  padding-right: 1.5em;
+  margin-left: 2em;
+}
+
+.secondary {
+  padding-top: 2em;
+}
+
 .embed-video {
-  margin-left: 15%;
-  width: 55em;
-  height: 30em;
+  width: 50vw;
+  height: 60vh;
+  border-radius: 1em;
 }
 
 .video-page {
   display: flex;
   align-items: flex-start;
+}
+
+.side-content {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.thumbnails {
+  color: #f0f0f0;
+  width: 11em;
+  height: 7em;
+  border: 1px solid red; /*temporary*/
+  border-right: dotted red;
+}
+
+.thumbnail-text {
+  color: #f0f0f0;
+  width: 15em;
+  height: 7em;
+  border: 1px solid red; /*temporary*/
+}
+
+.thumbnail-title {
+  font-weight: 580;
+  margin-bottom: 0.2em;
+}
+
+.thumbnail-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail-info span {
+  margin-bottom: 0.1em;
+}
+
+.below {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+.title {
+  /* border: 1px red solid; */
+  color: #f0f0f0;
+  font-size: 0.6em; /*The font style doesn't seem correct.*/
+}
+
+.top-row {
+  /* TODO: Add @media: when < 560px, wrap */
+  color: #f0f0f0;
+  border: 1px red solid;
+}
+
+.owner {
+  border-right: 2px red dotted; /*temporary*/
+  width: 50%;
+  color: #f0f0f0;
+  margin-top: 0.5em;
+  margin-right: 0.5em;
+}
+
+.channel-info {
+  margin-left: 1em;
+  font-size: 0.65em;
+}
+
+.channel-info h2 {
+  cursor: pointer;
+}
+
+.channel-info p {
+  font-size: 1.2em;
+  color: #888;
+  margin-top: 0.2em;
+}
+
+.subscribe-container {
+  display: flex;
+  align-items: center;
+  margin-left: 2em;
+}
+
+.subscribe-btn {
+  padding: 0.7em 1.1em;
+  background-color: #f0f0f0;
+  border-radius: 1.5em;
+  border: none;
+  cursor: pointer;
+}
+
+.subscribe-btn p {
+  font-size: 1.05em;
+  font-weight: 550;
+  color: #0f0f0f;
+}
+
+.subscribe-btn:hover {
+  background-color: #dfdfdf;
+}
+
+.actions {
+  width: 50%;
+  color: #f0f0f0;
+  margin-top: 0.5em;
+}
+
+.description {
+  /* border: 1px red solid; */
+  color: #f0f0f0;
+  background-color: #252525;
+  border-radius: 0.5em;
+  margin-top: 0.5em;
+  margin-right: 0.5em;
+  padding: 0.8em;
+}
+
+.description-video-info {
+  margin-bottom: 0.2em;
+}
+
+.description-video-info span {
+  margin-right: 0.4em;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.comments-header {
+  /* border-bottom: red 1px dotted; */
+  padding: 0.5em;
+}
+
+.comments-mid {
+  /* border-bottom: 1px red dashed; */
+  padding: 0.5em;
+  width: 100%;
+}
+
+.comments-mid .avatar {
+  cursor: default;
+}
+
+.comments-counter {
+  width: 15%;
+}
+
+#comments-counter {
+  color: #f0f0f0;
+  font-size: 1.4em;
+}
+
+.sort-comments {
+  color: #f0f0f0;
+  /* border-left: 1px red dotted; */
+}
+
+.comments-input {
+  /* border-left: 2px red dotted; */
+  margin-left: 1.5em;
+  margin-right: 1em;
+  width: 100%;
+}
+
+.comments-contents {
+  border: 1px red solid;
+  color: #f0f0f0;
+  margin-top: 2em;
+}
+
+.comments-input input {
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  border-bottom: 2px solid #252525;
+  padding-bottom: 0.5em;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  color: #f0f0f0;
+  font-size: 1em;
+}
+
+.comments-input input:focus {
+  border-bottom: 2px solid #f5f5f5;
+  transition-duration: 2s;
+}
+
+.sort-comments i {
+  font-size: 1.7em;
+  margin-right: 0.3em;
+}
+
+.sort-comments p {
+  font-weight: 570;
+}
+
+.sort-comments button {
+  border: none;
+  background-color: transparent;
+  color: #f0f0f0;
+  font-size: 0.9em;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.2em;
 }
 
 /*----------Adjustments-----------*/
@@ -552,7 +784,27 @@ a {
   }
 }
 
+@media (max-width: 1015px) {
+  .secondary {
+    display: none;
+  }
+
+  .columns {
+    margin: 0;
+    width: 100%;
+  }
+
+  .primary {
+    width: 100%;
+  }
+
+  .embed-video {
+    width: 100%;
+  }
+}
+
 /* TODO:
 -make sure navbar, scroll bar, and aside stay on top when user scroll down past the viewport height
 -Need to implement the scrollbar buttons for the scrollable header and app drawer
+-Fix video card sizes when in full screen
 */
