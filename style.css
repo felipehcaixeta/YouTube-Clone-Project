@@ -502,6 +502,7 @@ a {
 .yt-flexy {
   display: flex;
   flex-wrap: nowrap;
+  align-items: center;
 }
 
 .primary {
@@ -516,7 +517,7 @@ a {
 
 .embed-video {
   width: 50vw;
-  height: 60vh;
+  height: 56vh;
   border-radius: 1em;
 }
 
@@ -573,11 +574,11 @@ a {
 .top-row {
   /* TODO: Add @media: when < 560px, wrap */
   color: #f0f0f0;
-  border: 1px red solid;
+  /* border: 1px red solid; */
 }
 
 .owner {
-  border-right: 2px red dotted; /*temporary*/
+  /* border-right: 2px red dotted; */
   width: 50%;
   color: #f0f0f0;
   margin-top: 0.5em;
@@ -627,6 +628,55 @@ a {
   width: 50%;
   color: #f0f0f0;
   margin-top: 0.5em;
+  justify-content: flex-end;
+}
+
+.action-btns {
+  border: none;
+  background-color: #333;
+  border-top-left-radius: 1.2em;
+  border-bottom-left-radius: 1.2em;
+  border-top-right-radius: 1.2em;
+  border-bottom-right-radius: 1.2em;
+  font-size: 0.9em;
+  color: #f0f0f0;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.action-btns:hover {
+  background-color: #454545;
+}
+
+.action-child-cont {
+  margin-right: 0.5em;
+}
+
+.thumbs-child-down {
+  border-left: 1px solid #414141;
+}
+
+.thumbs-up {
+  border-top-left-radius: 1.2em;
+  border-bottom-left-radius: 1.2em;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.thumbs-down {
+  border-top-right-radius: 1.2em;
+  border-bottom-right-radius: 1.2em;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.more {
+  padding: 0.7em 0.7em;
+}
+
+.action-btn-text {
+  margin-left: 0.5em;
+  font-weight: 580;
 }
 
 .description {
