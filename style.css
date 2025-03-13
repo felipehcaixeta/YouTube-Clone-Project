@@ -39,7 +39,7 @@ a {
 
 .grid-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(21em, 1fr));
   grid-auto-rows: minmax(auto, 20em);
   gap: 3em 1em;
 }
@@ -431,7 +431,7 @@ a {
   width: 100%;
 }
 
-#fill1 {
+.fill1 {
   width: 100%;
 }
 
@@ -970,5 +970,6 @@ a {
 /* TODO:
 -make sure navbar, scroll bar, and aside stay on top when user scroll down past the viewport height
 -Need to implement the scrollbar buttons for the scrollable header and app drawer
--Fix video card sizes when in full screen
+-Make sure the grid in the home page is responsive and not buggy
+-
 */
