@@ -1,5 +1,5 @@
 document.getElementById("MenuToggle").addEventListener("click", function () {
-  const AppDrawer = document.getElementById("AppDrawer");
+  const AppDrawer = document.getElementById("HiddenAppDrawer");
   const MainContent = document.getElementById("MainContent");
   const ScrollableHeader = document.getElementById("ScrollableHeader");
 

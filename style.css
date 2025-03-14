@@ -358,7 +358,7 @@ a {
 
 .overlay {
   position: fixed;
-  top: 0;
+  top: 3.5em;
   left: 10em;
   width: 100vw;
   height: 100vh;
@@ -552,7 +552,7 @@ a {
 .secondary {
   padding-top: 2em;
   padding-right: 2em;
-  width: 35%%;
+  width: 35%;
 }
 
 .player {
