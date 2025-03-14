@@ -53,13 +53,17 @@ a {
 .nav-bar {
   top: 0;
   height: 3.5em;
-  width: 100%;
+  width: 99%;
   margin: 0 1em;
   flex-direction: row;
   justify-content: space-between;
-  position: sticky;
-  z-index: 100; /* ensures bar stays on top */
+  position: fixed;
+  z-index: 999; /* ensures bar stays on top */
 }
+
+/* .nav-left {
+  position: fixed;
+} */
 
 .menu-toggle {
   height: 1em;
@@ -211,7 +215,7 @@ a {
 
 .scrollable-header {
   top: 3.5em;
-  left: 5em;
+  left: 0;
   margin-bottom: 1em;
   margin-left: 5.1em;
   margin-right: 1em;
@@ -223,7 +227,7 @@ a {
   width: 100%;
   z-index: 100;
   overflow-x: scroll;
-  position: sticky;
+  position: fixed;
 }
 
 .scrollable-header::-webkit-scrollbar {
@@ -398,6 +402,7 @@ a {
 .content {
   margin: 0.3em;
   margin-right: 1em;
+  margin-top: 8.3em;
   margin-left: 5.5em;
   height: 100vh; /*Changin this will probably fix the navbar dissapearing issue*/
   width: 100%;
@@ -936,9 +941,9 @@ a {
     width: 7em;
   }
 
-  .flex-set {
+  /* .flex-set {
     justify-content: flex-end;
-  }
+  } */
 
   .mic-btn {
     background-color: transparent;
@@ -979,7 +984,6 @@ a {
 /* TODO:
 -make sure navbar, scroll bar, and aside stay on top when user scroll down past the viewport height
 -Need to implement the scrollbar buttons for the scrollable header and app drawer
--Make sure the grid in the home page is responsive and not buggy.
 -Implement toggle hidden drawer on video pages.
 -Work on responsiveness of video pages (don't forget to adjust the "more" button).
 */
