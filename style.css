@@ -457,8 +457,8 @@ a {
 }
 
 .avatar {
-  height: 2.2em;
-  width: 2.2em;
+  height: 2.6em;
+  width: 2.6em;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -501,8 +501,10 @@ a {
 /*---------Video Pages------------*/
 .columns {
   margin: 0 auto;
-  width: 50%;
+  width: 70%;
   height: 100vh;
+  margin-top: 3em;
+  flex-direction: row;
 }
 
 .vid-flex-set {
@@ -526,12 +528,20 @@ a {
 
 .secondary {
   padding-top: 2em;
+  padding-right: 2em;
+  width: 35%%;
+}
+
+.player {
+  width: 50vw;
+  height: -webkit-fill-available;
 }
 
 .embed-video {
-  width: 50vw;
-  height: 56vh;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
   border-radius: 1em;
+  aspect-ratio: 16 / 9;
 }
 
 .video-page {
@@ -572,7 +582,14 @@ a {
 
 .video-more {
   display: flex;
+  justify-content: space-between;
+  flex: 1 1 0;
+  width: 100%;
   cursor: pointer;
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  max-height: 2.5em;
 }
 
 .secondary-more {
@@ -596,10 +613,10 @@ a {
 .thumbnail-text {
   align-items: flex-start;
   flex-direction: column;
-  flex-shrink: 1;
+  flex: 1 1 0;
   color: #f0f0f0;
-  width: 15em;
-  height: 7em;
+  width: 55%;
+  height: 6.2em;
   /* border: 1px solid red; */
 }
 
@@ -608,10 +625,6 @@ a {
   margin-bottom: 0.2em;
   width: 100%;
   min-width: 90%;
-  max-height: 2.5em;
-  overflow: hidden;
-  white-space: wrap;
-  text-overflow: ellipsis;
 }
 
 .thumbnail-info {
@@ -765,6 +778,7 @@ a {
 .comments-header {
   /* border-bottom: red 1px dotted; */
   padding: 0.5em;
+  gap: 1em;
 }
 
 .comments-mid {
@@ -778,7 +792,7 @@ a {
 }
 
 .comments-counter {
-  width: 15%;
+  width: 9em;
 }
 
 #comments-counter {
@@ -954,6 +968,17 @@ a {
   .profile-btn-nav {
     margin: 0;
   }
+
+  .top-row {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .actions,
+  .owner {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 1015px) {
@@ -973,6 +998,10 @@ a {
   .embed-video {
     width: 100%;
   }
+
+  .comments-counter {
+    font-size: 0.9em;
+  }
 }
 
 @media (max-width: 1158px) {
@@ -981,8 +1010,45 @@ a {
   }
 }
 
+@media (max-width: 1700px) {
+  .columns {
+    margin: 3em 0;
+    width: 100vw;
+  }
+
+  .primary,
+  .player {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1800px) {
+  .columns {
+    margin: 3em 3m;
+    width: 100%;
+  }
+}
+
+/* @media (max-width: 1900px) {
+  .columns {
+    margin: 3em 10em;
+    width: 100%;
+  }
+} */
+
+@media (max-width: 1355px) {
+  .clip {
+    display: none;
+  }
+}
+
+@media (max-width: 1250px) {
+  .download {
+    display: none;
+  }
+}
+
 /* TODO:
--make sure navbar, scroll bar, and aside stay on top when user scroll down past the viewport height
 -Need to implement the scrollbar buttons for the scrollable header and app drawer
 -Implement toggle hidden drawer on video pages.
 -Work on responsiveness of video pages (don't forget to adjust the "more" button).
